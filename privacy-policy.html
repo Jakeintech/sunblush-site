@@ -150,7 +150,7 @@
         <p>Photos you capture in Sunblush are written to the app's App Group container as HEIC files, alongside a SwiftData record of their metadata. With your permission, Sunblush can also save a copy to the iOS Photos library so your golden-hour shots appear alongside the rest of your camera roll. Access to the Photos library is governed by iOS; you can revoke it at any time in Settings &gt; Privacy &amp; Security &gt; Photos &gt; Sunblush. Sunblush never transmits photos off the device.</p>
 
         <h2>6. Weather</h2>
-        <p>Sunblush uses Apple's WeatherKit to fetch the current conditions at the time of capture and store them as metadata on the photo (for example, "partly cloudy, 68°F"). Weather queries are coarse — they use only the location required to return the forecast — and they are not combined with any advertising identifier.</p>
+        <p>Sunblush uses Apple's WeatherKit to fetch current conditions and the hourly forecast for your location and your saved places. It uses that forecast to (a) store conditions as metadata on a photo (for example, "partly cloudy, 68°F") and (b) compute an on-device sky forecast for upcoming sunrises and sunsets, which decides whether a golden-hour reminder is sent. WeatherKit requests include only the coordinates needed to return the forecast; they go to Apple, not to us, and are not combined with any advertising identifier. The sky forecast itself is calculated on your device.</p>
 
         <h2>7. Subscriptions</h2>
         <p>Sunblush is free to download and use. An optional paid subscription, Sunblush Pro, unlocks premium features:</p>
