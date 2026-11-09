@@ -117,17 +117,17 @@
         <a class="wordmark" href="index.html">Sunblush</a>
 
         <h1>Privacy Policy</h1>
-        <p class="date">Last updated: April 16, 2026</p>
+        <p class="date">Last updated: November 9, 2026</p>
 
         <h2>1. Overview</h2>
         <p>This Privacy Policy describes how Sunblush ("we," "us," or "the app"), developed by Jake Williams, handles information when you use the Sunblush iOS application. Sunblush is designed around a privacy-first architecture: the data that matters to you — your photos, your location history, your capture archive — is processed and stored on your device. This policy explains what the app collects, why, and how we keep it protected.</p>
         <p>We do not sell your personal information. We do not use your data for advertising. We do not share your data with third parties for marketing purposes.</p>
 
         <h2>2. Data Collection Summary</h2>
-        <p>The table below summarizes the data types the app handles, consistent with our App Store privacy label declarations.</p>
+        <p>The table below summarizes the data types the app handles. Only Precise Location appears as collected on our App Store privacy label, because coordinates are sent to Apple WeatherKit to fetch the forecast; photos and purchase records never reach us.</p>
         <table>
             <tr><th>Data Type</th><th>Purpose</th><th>Linked to Identity</th><th>Used for Tracking</th><th>Notes</th></tr>
-            <tr><td>Precise Location</td><td>App functionality</td><td>No</td><td>No</td><td>Used to calculate sunrise, sunset, and golden-hour times for your exact location via CoreLocation. Stored on-device only.</td></tr>
+            <tr><td>Precise Location</td><td>App functionality</td><td>No</td><td>No</td><td>Used to calculate sunrise, sunset, and golden-hour times for your exact location via CoreLocation, and sent to Apple WeatherKit to fetch the sky forecast. Never stored off the device by us.</td></tr>
             <tr><td>Photos or Videos</td><td>App functionality</td><td>No</td><td>No</td><td>Golden-hour photos captured by you, stored on-device in the App Group container. Never uploaded.</td></tr>
             <tr><td>Purchase History</td><td>App functionality</td><td>Yes</td><td>No</td><td>StoreKit 2 subscription state used to gate premium features. Managed entirely by Apple.</td></tr>
         </table>
@@ -150,18 +150,19 @@
         <p>Photos you capture in Sunblush are written to the app's App Group container as HEIC files, alongside a SwiftData record of their metadata. With your permission, Sunblush can also save a copy to the iOS Photos library so your golden-hour shots appear alongside the rest of your camera roll. Access to the Photos library is governed by iOS; you can revoke it at any time in Settings &gt; Privacy &amp; Security &gt; Photos &gt; Sunblush. Sunblush never transmits photos off the device.</p>
 
         <h2>6. Weather</h2>
-        <p>Sunblush uses Apple's WeatherKit to fetch the current conditions at the time of capture and store them as metadata on the photo (for example, "partly cloudy, 68°F"). Weather queries are coarse — they use only the location required to return the forecast — and they are not combined with any advertising identifier.</p>
+        <p>Sunblush uses Apple's WeatherKit to fetch current conditions and the hourly forecast for your location and your saved places. It uses that forecast to (a) store conditions as metadata on a photo (for example, "partly cloudy, 68°F") and (b) compute an on-device sky forecast for upcoming sunrises and sunsets, which decides whether a golden-hour reminder is sent. WeatherKit requests include only the coordinates needed to return the forecast; they go to Apple, not to us, and are not combined with any advertising identifier. The sky forecast itself is calculated on your device.</p>
 
         <h2>7. Subscriptions</h2>
         <p>Sunblush is free to download and use. An optional paid subscription, Sunblush Pro, unlocks premium features:</p>
         <ul>
-            <li>Sunblush Pro Monthly — $0.99 per month.</li>
-            <li>Sunblush Pro Annual — $9.99 per year, with a 1-week free trial for new subscribers.</li>
+            <li>Sunblush Pro Monthly — $2.99 per month.</li>
+            <li>Sunblush Pro Annual — $14.99 per year, with a 1-week free trial for new subscribers.</li>
+            <li>Sunblush Pro Lifetime — $39.99 once (not a subscription).</li>
         </ul>
         <p>Subscriptions are sold and managed by Apple through the App Store using your Apple ID. Sunblush receives only the transaction receipt needed to validate entitlement — we do not see your credit card number, billing address, or other payment details. Refer to Apple's privacy policy for information about how Apple handles payment data.</p>
 
         <h2>8. Third-Party Services</h2>
-        <p>Sunblush does not bundle third-party analytics SDKs, advertising SDKs, or crash-reporting SDKs beyond those provided by Apple. The app makes no network calls other than WeatherKit requests to Apple, and no other service receives any data about you or your captures.</p>
+        <p>Sunblush does not bundle third-party analytics SDKs, advertising SDKs, or crash-reporting SDKs beyond those provided by Apple. The app's only network requests are WeatherKit requests to Apple and a download of a small static configuration file used to switch features off remotely if something goes wrong; that download sends no information about you or your captures, and no service receives any data about you or your captures.</p>
 
         <h2>9. Children's Privacy</h2>
         <p>Sunblush is rated 4+ and is appropriate for all ages, but we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us at <a href="mailto:info@jakeawilliams.com">info@jakeawilliams.com</a> and we will take appropriate action. This policy is intended to comply with the U.S. Children's Online Privacy Protection Act (COPPA).</p>
