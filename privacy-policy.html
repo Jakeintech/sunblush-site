@@ -1,195 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1A1A22">
-    <title>Sunblush — Privacy Policy</title>
-    <meta name="description" content="Sunblush privacy policy. On-device by design: location, photos, and metadata stay on your iPhone. No tracking, no third-party analytics, no ads.">
-    <link rel="canonical" href="https://jakeintech.github.io/sunblush-site/privacy-policy.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sunblush">
-    <meta property="og:title" content="Sunblush — Privacy Policy">
-    <meta property="og:description" content="On-device by design. No tracking, no analytics SDKs, no ads.">
-    <meta property="og:url" content="https://jakeintech.github.io/sunblush-site/privacy-policy.html">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Sunblush — Privacy Policy">
-    <meta name="twitter:description" content="On-device by design. No tracking, no analytics SDKs, no ads.">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "SF Pro Text", system-ui, sans-serif;
-            background: radial-gradient(ellipse at top, #2A1F1A 0%, #1A1A22 55%, #0D0D12 100%);
-            color: #FAF7F2;
-            line-height: 1.65;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px 64px;
-        }
-        .container { max-width: 720px; width: 100%; }
-        .wordmark {
-            display: inline-block;
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            background: linear-gradient(135deg, #E8A040 0%, #C4826A 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            margin-bottom: 32px;
-        }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
-            color: #FAF7F2;
-        }
-        h2 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-top: 36px;
-            margin-bottom: 10px;
-            color: #FAF7F2;
-        }
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-top: 20px;
-            margin-bottom: 6px;
-            color: #FAF7F2;
-        }
-        p { color: #C7BFB3; margin-bottom: 12px; font-size: 16px; }
-        .date { color: #A39B91; margin-bottom: 32px; font-size: 14px; }
-        a { color: #E8A040; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0 24px;
-            background: rgba(250, 247, 242, 0.03);
-            border-radius: 12px;
-            overflow: hidden;
-        }
-        th, td {
-            border-bottom: 1px solid rgba(250, 247, 242, 0.08);
-            padding: 12px 14px;
-            text-align: left;
-            font-size: 14px;
-            color: #C7BFB3;
-            vertical-align: top;
-        }
-        th {
-            background: rgba(232, 160, 64, 0.08);
-            font-weight: 600;
-            color: #FAF7F2;
-            letter-spacing: 0.01em;
-        }
-        tr:last-child td { border-bottom: none; }
-        ul { padding-left: 24px; margin-bottom: 12px; color: #C7BFB3; }
-        li { margin-bottom: 6px; font-size: 16px; }
-        footer {
-            border-top: 1px solid rgba(250, 247, 242, 0.08);
-            padding-top: 24px;
-            margin-top: 48px;
-            text-align: center;
-            width: 100%;
-            max-width: 720px;
-        }
-        footer a {
-            color: #A39B91;
-            margin: 0 12px;
-            font-size: 14px;
-        }
-        footer a:hover { color: #E8A040; text-decoration: none; }
-        .copyright {
-            margin-top: 20px;
-            color: #A39B91;
-            font-size: 13px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunblush Privacy Policy</title>
+<meta name="description" content="What Sunblush does with your location, photos and other information. No accounts, no ads, no tracking. Photos stay on your device.">
+<meta name="apple-itunes-app" content="app-id=6762225490">
+<meta name="theme-color" content="#121110">
+<link rel="canonical" href="https://jakeintech.github.io/sunblush-site/privacy-policy.html">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sunblush">
+<meta property="og:title" content="Sunblush Privacy Policy">
+<meta property="og:description" content="What Sunblush does with your location, photos and other information. No accounts, no ads, no tracking. Photos stay on your device.">
+<meta property="og:url" content="https://jakeintech.github.io/sunblush-site/privacy-policy.html">
+<meta property="og:image" content="https://jakeintech.github.io/sunblush-site/assets/img/og.png">
+<meta name="twitter:card" content="summary">
+<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-    <div class="container">
-        <a class="wordmark" href="index.html">Sunblush</a>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap site-head">
+  <a class="brand" href="./" aria-label="Sunblush home">
+    <img src="assets/img/icon-192.webp" alt="" width="30" height="30">
+    Sunblush
+  </a>
+  <nav class="site-nav" aria-label="Site">
+    <a href="support.html">Support</a>
+    <a class="btn small" href="https://apps.apple.com/app/id6762225490">Get the app</a>
+  </nav>
+</header>
+<main id="main" class="doc">
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated November 10, 2026</p>
 
-        <h1>Privacy Policy</h1>
-        <p class="date">Last updated: April 16, 2026</p>
+<div class="summary">
+<p><strong>The short version.</strong></p>
+<ul>
+<li>Sunblush has no accounts, no ads and no analytics or tracking software.</li>
+<li>Your photos and your journal stay on your device unless you choose to share them.</li>
+<li>Your location is used on your device, and its coordinates are sent to Apple to fetch the weather forecast and place names. It is not sent to us.</li>
+<li>We do not run a server that receives your data, and we do not sell or share personal information.</li>
+</ul>
+</div>
 
-        <h2>1. Overview</h2>
-        <p>This Privacy Policy describes how Sunblush ("we," "us," or "the app"), developed by Jake Williams, handles information when you use the Sunblush iOS application. Sunblush is designed around a privacy-first architecture: the data that matters to you — your photos, your location history, your capture archive — is processed and stored on your device. This policy explains what the app collects, why, and how we keep it protected.</p>
-        <p>We do not sell your personal information. We do not use your data for advertising. We do not share your data with third parties for marketing purposes.</p>
+<h2>1. Who we are</h2>
+<p>Sunblush is an app for iPhone, iPad and Apple Watch made by Jake Williams ("we", "us"). This policy explains what information the app handles, where it goes and the choices you have. Questions: <a href="mailto:info@jakeawilliams.com">info@jakeawilliams.com</a>.</p>
 
-        <h2>2. Data Collection Summary</h2>
-        <p>The table below summarizes the data types the app handles, consistent with our App Store privacy label declarations.</p>
-        <table>
-            <tr><th>Data Type</th><th>Purpose</th><th>Linked to Identity</th><th>Used for Tracking</th><th>Notes</th></tr>
-            <tr><td>Precise Location</td><td>App functionality</td><td>No</td><td>No</td><td>Used to calculate sunrise, sunset, and golden-hour times for your exact location via CoreLocation. Stored on-device only.</td></tr>
-            <tr><td>Photos or Videos</td><td>App functionality</td><td>No</td><td>No</td><td>Golden-hour photos captured by you, stored on-device in the App Group container. Never uploaded.</td></tr>
-            <tr><td>Purchase History</td><td>App functionality</td><td>Yes</td><td>No</td><td>StoreKit 2 subscription state used to gate premium features. Managed entirely by Apple.</td></tr>
-        </table>
+<h2>2. What the app handles</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Information</th><th>What it is used for</th><th>Where it goes</th></tr></thead>
+<tbody>
+<tr><td>Precise location</td><td>Sunrise, sunset and golden hour times, the sky forecast, and the place name on a photo.</td><td>Used on your device. Coordinates are sent to Apple Weather for the forecast and to Apple Maps for place names. Not sent to us.</td></tr>
+<tr><td>Photos you take in Sunblush</td><td>Your journal, Monthly Recap and share cards.</td><td>Stored on your device. Saved to your Photos library or shared only when you choose.</td></tr>
+<tr><td>Photos you pick from your library</td><td>Making a share card from a photo you already have.</td><td>Only the photos you pick, kept on your device.</td></tr>
+<tr><td>Saved places and Sunlight Reports</td><td>Forecasts for places you save, and sunlight calculations for an address you choose.</td><td>Stored on your device. Address searches and map views are handled by Apple Maps.</td></tr>
+<tr><td>Health data (optional, read only)</td><td>Showing your activity rings or a workout as a badge on a share card, if you turn that on.</td><td>Read on your device at the moment you make the card. Never stored by us or sent anywhere.</td></tr>
+<tr><td>Calendar (optional, read only)</td><td>Showing the number of events on a photo's day as a badge on a share card, if you turn that on.</td><td>Read on your device. Never stored by us or sent anywhere.</td></tr>
+<tr><td>Purchases</td><td>Unlocking Sunblush Pro.</td><td>Handled by Apple. We do not receive your name, payment details or purchase history.</td></tr>
+<tr><td>Crash reports</td><td>Fixing bugs.</td><td>Sunblush sends none itself. If you have chosen to share analytics with app developers in iOS Settings, Apple may send us crash reports that do not identify you.</td></tr>
+</tbody></table></div>
+<p>On the App Store, Sunblush's privacy label lists one item, Precise Location, used for App Functionality, not linked to you and not used for tracking. It is listed because the forecast request to Apple Weather includes your coordinates.</p>
 
-        <h2>3. On-Device Data</h2>
-        <p>Sunblush runs on Apple frameworks that keep your data local by design. The following happens entirely on your iPhone:</p>
-        <ul>
-            <li>Solar calculations (sunrise, sunset, golden hour, blue hour) from your current location using CoreLocation.</li>
-            <li>Reverse geocoding to label photos with a place name.</li>
-            <li>Photo capture through AVFoundation and storage in an App Group container shared only between the Sunblush app and its widget.</li>
-            <li>Photo metadata — solar position, phase, weather snapshot, timestamp, location — stored locally with SwiftData.</li>
-            <li>Monthly recaps and streak tracking computed from the on-device archive.</li>
-        </ul>
-        <p>No photo, location fix, or archive entry is transmitted off the device. Sunblush does not have an account system, and there is no server to receive your data even if we wanted one.</p>
+<h2>3. Location</h2>
+<p>With your permission, Sunblush uses your location to work out sun times for where you are, to request the forecast for that spot, and to label photos with a place name. You can refuse or withdraw permission at any time in Settings &gt; Privacy &amp; Security &gt; Location Services &gt; Sunblush. Without it, the app uses a default city, and you can still save places by searching for them.</p>
 
-        <h2>4. Location</h2>
-        <p>With your permission, Sunblush uses precise location through CoreLocation to calculate accurate golden-hour times for where you actually are, and to label each captured photo with the place it was taken. Location is used only for these features. You can deny or revoke location access at any time in the iOS Settings app under Privacy &amp; Security &gt; Location Services &gt; Sunblush. Without location access, the app will fall back to a default city and will not label photos with places.</p>
+<h2>4. Weather and maps</h2>
+<p>Forecasts come from Apple Weather (WeatherKit). Each request contains the coordinates of your location or a saved place and nothing that identifies you to us. Place search, map display and place names use Apple Maps. Apple handles these requests under its own <a href="https://www.apple.com/legal/privacy/">privacy policy</a>. The sky verdict itself is calculated on your device from the forecast.</p>
 
-        <h2>5. Photos</h2>
-        <p>Photos you capture in Sunblush are written to the app's App Group container as HEIC files, alongside a SwiftData record of their metadata. With your permission, Sunblush can also save a copy to the iOS Photos library so your golden-hour shots appear alongside the rest of your camera roll. Access to the Photos library is governed by iOS; you can revoke it at any time in Settings &gt; Privacy &amp; Security &gt; Photos &gt; Sunblush. Sunblush never transmits photos off the device.</p>
+<h2>5. Photos and sharing</h2>
+<p>Photos you take in Sunblush are stored on your device with their details: the time, the place, the sun's position and the weather. Sunblush can save a copy to your Photos library if you allow it. When you share a photo or a card, it goes to the app you pick, such as Instagram or Messages, and that app's own privacy policy applies from there. Sunblush itself uploads nothing.</p>
 
-        <h2>6. Weather</h2>
-        <p>Sunblush uses Apple's WeatherKit to fetch the current conditions at the time of capture and store them as metadata on the photo (for example, "partly cloudy, 68°F"). Weather queries are coarse — they use only the location required to return the forecast — and they are not combined with any advertising identifier.</p>
+<h2>6. Health and Calendar</h2>
+<p>These are optional and off until you turn them on in the share card editor. Sunblush reads your activity summary, workouts or the number of calendar events for a single day in order to draw a badge on a card you are making. It does not write to Health or Calendar, does not keep the data, and does not send it anywhere. Health data is never used for advertising or shared with anyone. You can withdraw access in Settings &gt; Privacy &amp; Security.</p>
 
-        <h2>7. Subscriptions</h2>
-        <p>Sunblush is free to download and use. An optional paid subscription, Sunblush Pro, unlocks premium features:</p>
-        <ul>
-            <li>Sunblush Pro Monthly — $0.99 per month.</li>
-            <li>Sunblush Pro Annual — $9.99 per year, with a 1-week free trial for new subscribers.</li>
-        </ul>
-        <p>Subscriptions are sold and managed by Apple through the App Store using your Apple ID. Sunblush receives only the transaction receipt needed to validate entitlement — we do not see your credit card number, billing address, or other payment details. Refer to Apple's privacy policy for information about how Apple handles payment data.</p>
+<h2>7. Notifications</h2>
+<p>Golden hour alerts are scheduled on your device. No push notification server is involved, and we do not know when or whether an alert was delivered or opened.</p>
 
-        <h2>8. Third-Party Services</h2>
-        <p>Sunblush does not bundle third-party analytics SDKs, advertising SDKs, or crash-reporting SDKs beyond those provided by Apple. The app makes no network calls other than WeatherKit requests to Apple, and no other service receives any data about you or your captures.</p>
+<h2>8. Purchases</h2>
+<p>Sunblush Pro is sold by Apple as a monthly subscription, a yearly subscription or a one-time purchase. Apple processes the payment and tells the app on your device whether Pro is unlocked. We do not see your card number, billing address or Apple Account.</p>
 
-        <h2>9. Children's Privacy</h2>
-        <p>Sunblush is rated 4+ and is appropriate for all ages, but we do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us at <a href="mailto:info@jakeawilliams.com">info@jakeawilliams.com</a> and we will take appropriate action. This policy is intended to comply with the U.S. Children's Online Privacy Protection Act (COPPA).</p>
+<h2>9. What we do not do</h2>
+<ul>
+<li>No accounts or sign-in.</li>
+<li>No advertising, and no advertising identifier.</li>
+<li>No third-party analytics, tracking or crash-reporting software.</li>
+<li>No sale or sharing of personal information.</li>
+</ul>
+<p>Besides the Apple services above, the app makes one other network request: it downloads a small settings file from sunblush.app that lets us switch a feature off if something goes wrong. That request sends no information about you.</p>
 
-        <h2>10. International Users (GDPR / CCPA)</h2>
-        <p>If you are located in the European Economic Area, the United Kingdom, or Switzerland, you have rights under the General Data Protection Regulation (GDPR), including the right to access, correct, delete, restrict, or object to processing of personal data, and the right to data portability. Because Sunblush stores your captures and location history on your device, you can exercise most of these rights directly within the app by viewing, editing, or deleting your data.</p>
-        <p>If you are a California resident, the California Consumer Privacy Act (CCPA) gives you the right to know what personal information we collect, the right to delete it, and the right not to be discriminated against for exercising these rights. We do not sell personal information as defined by the CCPA.</p>
-        <p>To exercise any of these rights, contact us at <a href="mailto:info@jakeawilliams.com">info@jakeawilliams.com</a>.</p>
+<h2>10. Keeping and deleting your data</h2>
+<p>Your journal, places, reports and settings stay on your device until you delete them. You can delete individual photos in the app. Deleting Sunblush removes everything it stored. Copies you saved to your Photos library stay there until you remove them in Photos. Because we hold none of your data, there is nothing for us to delete on our side.</p>
 
-        <h2>11. Data Retention and Deletion</h2>
-        <p>Because your capture archive and preferences live on your device, they persist until you delete them. You can delete individual photos, clear your entire archive, or remove the app. Uninstalling Sunblush removes the App Group container and all locally stored data. Copies you chose to save to the iOS Photos library remain there and can be removed from the Photos app.</p>
+<h2>11. Children</h2>
+<p>Sunblush is rated 4+ and is not directed at children. We do not knowingly collect personal information from children under 13. If you believe a child has sent us personal information by email, contact us and we will delete it.</p>
 
-        <h2>12. Security</h2>
-        <p>We rely on the security protections built into iOS: data is stored inside the app's sandbox and App Group container, protected by the device passcode and hardware encryption. Network requests use HTTPS with certificate validation. No system is perfectly secure, but we design Sunblush to minimize the data that could ever be exposed.</p>
+<h2>12. Your rights</h2>
+<p>Depending on where you live, laws such as the GDPR or the CCPA give you rights to access, correct, delete or restrict the use of your personal data. Because your data is stored on your own device, you can do these things directly in the app. We do not sell personal information. If you have a request we can help with, write to <a href="mailto:info@jakeawilliams.com">info@jakeawilliams.com</a>.</p>
 
-        <h2>13. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page and, for material changes, provide notice inside the app. Your continued use of Sunblush after changes take effect constitutes acceptance of the updated policy.</p>
+<h2>13. Security</h2>
+<p>Sunblush relies on the protections built into iOS: its data sits inside the app's sandbox, protected by your passcode and the device's encryption, and every network request uses HTTPS.</p>
 
-        <h2>14. Contact</h2>
-        <p>If you have questions or requests about this Privacy Policy or your data, contact us at:</p>
-        <p>Jake Williams<br>Email: <a href="mailto:info@jakeawilliams.com">info@jakeawilliams.com</a></p>
-    </div>
+<h2>14. Changes</h2>
+<p>If this policy changes, we will update the date at the top of this page. For a significant change we will also say so in the app.</p>
 
-    <footer>
-        <a href="index.html">Home</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="support.html">Support</a>
-        <div class="copyright">&copy; 2026 Jake Williams. All rights reserved.</div>
-    </footer>
+<h2>15. Contact</h2>
+<p>Jake Williams<br><a href="mailto:info@jakeawilliams.com">info@jakeawilliams.com</a></p>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="./">Home</a>
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Use</a>
+      <a href="mailto:info@jakeawilliams.com">Contact</a>
+    </nav>
+    <p>&copy; 2026 Jake Williams. Apple, iPhone, iPad, Apple Watch and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
 </body>
 </html>
