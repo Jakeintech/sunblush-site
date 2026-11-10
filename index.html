@@ -1,174 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1A1A22">
-    <title>Sunblush — Never miss a good sunset.</title>
-    <meta name="description" content="Sunblush tells you when golden hour starts and whether tonight's sky is worth it, opens the camera at the right moment, and quietly builds an archive of every sunrise and sunset you catch. On-device, no social feed, no filters.">
-    <link rel="canonical" href="https://jakeintech.github.io/sunblush-site/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Sunblush">
-    <meta property="og:title" content="Sunblush — Your daily golden hour, captured.">
-    <meta property="og:description" content="Golden hour, calculated to your exact location. A minimal camera, a private archive, a daily ritual. No feed. No filters. All on-device.">
-    <meta property="og:url" content="https://jakeintech.github.io/sunblush-site/">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sunblush — Your daily golden hour, captured.">
-    <meta name="twitter:description" content="Golden hour, calculated to your exact location. A minimal camera, a private archive, a daily ritual.">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "SF Pro Text", system-ui, sans-serif;
-            background: radial-gradient(ellipse at top, #2A1F1A 0%, #1A1A22 55%, #0D0D12 100%);
-            color: #FAF7F2;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 48px 20px;
-        }
-        .container { max-width: 720px; width: 100%; }
-        header { text-align: center; margin-bottom: 56px; }
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #E8A040 0%, #C4826A 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .tagline {
-            font-size: 22px;
-            color: #E8A040;
-            font-weight: 500;
-            letter-spacing: -0.01em;
-        }
-        .hero {
-            font-size: 18px;
-            color: #A39B91;
-            margin-bottom: 48px;
-            text-align: center;
-            line-height: 1.7;
-        }
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 48px;
-            margin-bottom: 64px;
-            flex-wrap: wrap;
-        }
-        .stat { text-align: center; }
-        .stat-number {
-            font-size: 36px;
-            font-weight: 700;
-            color: #E8A040;
-            font-variant-numeric: tabular-nums;
-        }
-        .stat-label {
-            font-size: 12px;
-            color: #A39B91;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-top: 4px;
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            margin-bottom: 64px;
-        }
-        .feature {
-            background: rgba(250, 247, 242, 0.04);
-            border: 1px solid rgba(232, 160, 64, 0.12);
-            border-radius: 16px;
-            padding: 24px;
-        }
-        .feature h3 {
-            font-size: 17px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #FAF7F2;
-        }
-        .feature p {
-            font-size: 15px;
-            color: #A39B91;
-            line-height: 1.6;
-        }
-        .cta {
-            text-align: center;
-            margin-bottom: 56px;
-        }
-        .cta a {
-            display: inline-block;
-            background: linear-gradient(135deg, #E8A040 0%, #C4826A 100%);
-            color: #1A1A22;
-            padding: 14px 28px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: transform 0.15s ease;
-        }
-        .cta a:hover { transform: translateY(-1px); }
-        footer {
-            border-top: 1px solid rgba(250, 247, 242, 0.08);
-            padding-top: 32px;
-            text-align: center;
-            width: 100%;
-        }
-        footer a {
-            color: #A39B91;
-            text-decoration: none;
-            margin: 0 16px;
-            font-size: 14px;
-        }
-        footer a:hover { color: #E8A040; }
-        .copyright {
-            margin-top: 24px;
-            color: #A39B91;
-            font-size: 13px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunblush: Sunset Forecast for iPhone. Know if tonight's sky is worth it.</title>
+<meta name="description" content="Sunblush gives every sunrise and sunset a plain verdict, from Muted to Spectacular, with the reasons and how sure the forecast is. Alerts only for promising skies. Free on iPhone, iPad and Apple Watch.">
+<meta name="apple-itunes-app" content="app-id=6762225490">
+<meta name="theme-color" content="#121110">
+<link rel="canonical" href="https://jakeintech.github.io/sunblush-site/">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sunblush">
+<meta property="og:title" content="Sunblush: know if tonight's sky is worth it">
+<meta property="og:description" content="A plain verdict for every sunrise and sunset, with the reasons and how sure the forecast is. Alerts only for promising skies.">
+<meta property="og:url" content="https://jakeintech.github.io/sunblush-site/">
+<meta property="og:image" content="https://jakeintech.github.io/sunblush-site/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sunblush. Know if tonight's sky is worth it.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sunblush: know if tonight's sky is worth it">
+<meta name="twitter:description" content="A plain verdict for every sunrise and sunset, with the reasons and how sure the forecast is.">
+<meta name="twitter:image" content="https://jakeintech.github.io/sunblush-site/assets/img/og.png">
+<link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plex-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Sunblush: Sunset Forecast",
+  "operatingSystem": "iOS 18 or later, watchOS 10 or later",
+  "applicationCategory": "WeatherApplication",
+  "description": "Sunblush gives every sunrise and sunset a plain verdict, from Muted to Spectacular, with the reasons and how sure the forecast is.",
+  "url": "https://jakeintech.github.io/sunblush-site/",
+  "downloadUrl": "https://apps.apple.com/app/id6762225490",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Jake Williams" }
+}
+</script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Sunblush</h1>
-            <p class="tagline">Never miss a good sunset.</p>
-        </header>
+<a class="skip" href="#main">Skip to content</a>
 
-        <p class="hero">Sunblush knows when the sky turns gold at your exact location — and whether tonight's sky is worth stepping outside for. It only nudges you when the forecast looks promising, opens a minimal camera in one tap, and quietly files the photo with the solar data, the weather, and the place it was taken. Over time it becomes a private archive of every sunrise and sunset you caught. No filters. No feed. No noise.</p>
+<header class="wrap site-head">
+  <a class="brand" href="./" aria-label="Sunblush home">
+    <img src="assets/img/icon-192.webp" alt="" width="30" height="30">
+    Sunblush
+  </a>
+  <nav class="site-nav" aria-label="Site">
+    <a href="#pricing">Pricing</a>
+    <a href="support.html">Support</a>
+  </nav>
+</header>
 
-        <div class="stats">
-            <div class="stat"><div class="stat-number">2</div><div class="stat-label">golden hours a day</div></div>
-            <div class="stat"><div class="stat-number">0</div><div class="stat-label">photos uploaded to any server</div></div>
-            <div class="stat"><div class="stat-number">100%</div><div class="stat-label">on-device</div></div>
-        </div>
+<main id="main">
 
-        <div class="features">
-            <div class="feature"><h3>Is Tonight Worth It?</h3><p>Sunblush reads Apple Weather's forecast for low, mid and high cloud at the moment of sunrise and sunset. High clouds with an open horizon light up; a low cloud bank blocks the show. You get a plain-language verdict — Muted to Spectacular — with the reasons and how sure it is. A likelihood, never a promise.</p></div>
-            <div class="feature"><h3>Alerts You Don't Mute</h3><p>Most golden-hour apps ping you every evening until you turn them off. Sunblush books a week ahead and, by default, only taps you on the shoulder when the sky looks Vivid or better. Tap the alert and you land in the camera.</p></div>
-            <div class="feature"><h3>Solar Intelligence</h3><p>Golden hour, blue hour, and civil twilight calculated from your location, to the minute. Countdown on the home screen. Widget on your lock screen. Dynamic Island when the window is live.</p></div>
-            <div class="feature"><h3>One-Tap Capture</h3><p>A minimal camera opens during the golden window. One frame, one tap, one haptic. No filters, no retouching, no portrait mode — the sky is already the subject.</p></div>
-            <div class="feature"><h3>Metadata You Can't Get Elsewhere</h3><p>Every photo is tagged with solar position, golden-hour phase, weather, and location. Your camera roll can't do this. Your archive becomes a structured dataset of light.</p></div>
-            <div class="feature"><h3>Streaks and Recaps</h3><p>A streak counts consecutive days you showed up. End of month, Sunblush hands you a grid of every capture, the cities you stood in, and your longest run. One good habit, made visible.</p></div>
-            <div class="feature"><h3>Private by Design</h3><p>Photos live on your device. Your location is only used on-device and to ask Apple Weather for the forecast. No account. No server of ours. No tracking. The archive is yours alone, and uninstalling takes it with you.</p></div>
-            <div class="feature"><h3>Built for the Ritual</h3><p>This isn't a general camera app or a weather app. It does one thing — help you notice, capture, and remember the best ten minutes of every day.</p></div>
-        </div>
-
-        <div class="cta">
-            <a href="https://apps.apple.com/app/id6762225490">Download on the App Store</a>
-        </div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="tag">Sunset forecast for iPhone</p>
+      <h1>Know if tonight's sky is worth it.</h1>
+      <p class="lede">Sunblush gives every sunrise and sunset a plain verdict, from Muted to Spectacular, with the reasons behind it and how sure the forecast is. It alerts you only when the sky looks promising.</p>
+      <a class="btn" href="https://apps.apple.com/app/id6762225490">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.5 9 10 13.5 14.500 9M4 17h12"/></svg>
+        Download on the App Store
+      </a>
+      <p class="fine">Free. For iPhone, iPad and Apple Watch.</p>
     </div>
+    <div class="phone">
+      <img src="assets/img/shot-today.webp" width="368" height="800" alt="The Sunblush Today screen. Golden hour begins in 2 hours 15 minutes, and tonight's sky is forecast as Spectacular." fetchpriority="high">
+    </div>
+  </div>
+</section>
 
-    <footer>
-        <a href="privacy-policy.html">Privacy Policy</a>
-        <a href="terms-of-service.html">Terms of Service</a>
-        <a href="support.html">Support</a>
-        <div class="copyright">&copy; 2026 Jake Williams. All rights reserved.</div>
-    </footer>
+<section class="scale" aria-label="The five verdicts">
+  <div class="wrap">
+    <ol>
+      <li class="t-muted">Muted</li>
+      <li class="t-soft">Soft</li>
+      <li class="t-good">Good</li>
+      <li class="t-vivid">Vivid</li>
+      <li class="t-spectacular">Spectacular</li>
+    </ol>
+    <p>One word for every sunrise and sunset. Words first, because a percentage tells you very little.</p>
+  </div>
+</section>
+
+<section class="benefit flip">
+  <div class="wrap">
+    <div class="visual phone">
+      <img src="assets/img/shot-sky.webp" width="368" height="800" loading="lazy" alt="The sky ahead screen. Tonight's sunset is Spectacular because high clouds will catch the color and little low cloud is in the way. Cloud cover is shown by height: high 50 percent, mid 25 percent, low 5 percent.">
+    </div>
+    <div class="copy">
+      <p class="tag">An honest forecast</p>
+      <h2>The reasons, not just a score.</h2>
+      <p>Sunblush reads Apple Weather's cloud cover at low, mid and high altitude for the moment the sun meets the horizon. High cloud over an open horizon catches the color. A low cloud bank blocks it.</p>
+      <ul>
+        <li>A one-word verdict you can read in two seconds</li>
+        <li>The reasons, in plain language</li>
+        <li>A confidence label that firms up as the hour gets closer</li>
+        <li>Afterwards, a tally of how often the forecast matched what you saw</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="benefit">
+  <div class="wrap">
+    <div class="copy">
+      <p class="tag">Alerts you won't mute</p>
+      <h2>Only for skies worth going out for.</h2>
+      <p>Most golden hour reminders fire every evening until you switch them off. Sunblush plans a week ahead and, by default, only notifies you when the forecast is Vivid or better.</p>
+      <p>The alert says the verdict and the time. Tap it and the camera opens.</p>
+    </div>
+    <div class="visual">
+      <div class="lock" role="img" aria-label="A Lock Screen with one Sunblush notification: Vivid sunset likely at 4:51 PM. Golden hour starts in 30 minutes. High clouds to catch the color.">
+        <div class="date">Monday, November 9</div>
+        <div class="clock">3:42</div>
+        <div class="note">
+          <img src="assets/img/icon-192.webp" width="38" height="38" alt="" loading="lazy">
+          <div>
+            <b>Vivid sunset likely · 4:51 PM</b>
+            <span>Golden hour starts in 30 min. High clouds to catch the color.</span>
+          </div>
+        </div>
+        <p class="quiet-day">Grey evening? No alert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefit flip">
+  <div class="wrap">
+    <div class="visual phone">
+      <img src="assets/img/shot-share.webp" width="414" height="900" loading="lazy" alt="The share card editor. A sunset photo with the verdict Spectacular set over it, with Story, Portrait and Square formats and a row of card styles.">
+    </div>
+    <div class="copy">
+      <p class="tag">Catch it, keep it, share it</p>
+      <h2>One tap to the camera. A journal of every sky.</h2>
+      <p>The camera keeps tonight's verdict on screen and suggests settings for the light. Each photo is saved with the sun's position, the phase of light, the weather and the place you stood.</p>
+      <ul>
+        <li>The Log shows your sunrises and sunsets day by day</li>
+        <li>Atlas maps where you stood</li>
+        <li>Monthly Recap gathers your skies, places and longest streak</li>
+        <li>Share cards come ready-sized for Stories, portrait and square</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="tag">Without opening the app</p>
+    <h2>The verdict, where you already look.</h2>
+    <div class="grid">
+      <div><h3>Home Screen widgets</h3><p>Tonight's verdict, a countdown to golden hour and the sun's path through the day.</p></div>
+      <div><h3>Lock Screen widgets</h3><p>The verdict and the next golden hour beside the clock.</p></div>
+      <div><h3>Live Activity</h3><p>A countdown on the Lock Screen and in the Dynamic Island while golden hour is on.</p></div>
+      <div><h3>Siri</h3><p>Ask "How's the sky in Sunblush?" and hear the verdict and the reason.</p></div>
+      <div><h3>Control Center</h3><p>Buttons that open the camera or the forecast.</p></div>
+      <div><h3>Apple Watch</h3><p>An app and complications that count down to golden hour.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="benefit">
+  <div class="wrap">
+    <div class="copy">
+      <p class="tag">Sunlight Reports · Pro</p>
+      <h2>When does this place get sun?</h2>
+      <p>Choose a place, the direction it faces and a date range. Sunblush works out when direct sun reaches it through the seasons and lets you sketch the buildings or trees that block it.</p>
+      <p>The result is a PDF report built on your device. Useful for a balcony, a garden or a property listing.</p>
+      <p class="fine">Reports are calculated from the sun's path under clear skies. They do not include weather. Free shows the headline figures. The full report and PDF export are part of Sunblush Pro.</p>
+    </div>
+    <div class="visual phone">
+      <img src="assets/img/shot-sunlight.webp" width="552" height="1200" loading="lazy" alt="A Sunlight Report for a west-facing balcony. Sun window 1:20 PM to 5:54 PM on June 21, average daily sun 2 hours 38 minutes, no direct sun on the shortest day.">
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="wrap">
+    <p class="tag">Pricing</p>
+    <h2>Free to use. Pro when you want more.</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Sunblush</h3>
+        <p class="price">Free</p>
+        <ul>
+          <li>The sky verdict for the next 36 hours</li>
+          <li>Alerts for promising skies</li>
+          <li>Camera, Log, streaks and Monthly Recap</li>
+          <li>Share cards</li>
+          <li>Three saved places</li>
+          <li>Home Screen and Lock Screen widgets</li>
+          <li>Live Activity, Siri and Apple Watch</li>
+        </ul>
+      </div>
+      <div class="plan pro">
+        <h3>Sunblush Pro</h3>
+        <p class="price">Everything in free, and:</p>
+        <div class="prices">
+          <div><b>$2.99</b><span>a month</span></div>
+          <div><b>$14.99</b><span>a year</span></div>
+          <div><b>$39.99</b><span>once</span></div>
+        </div>
+        <ul>
+          <li>The full three-day sky outlook</li>
+          <li>RAW capture</li>
+          <li>The Golden Hour widget in every size</li>
+          <li>Unlimited saved places</li>
+          <li>Full Sunlight Reports with PDF export</li>
+          <li>The whole year ahead in the Light Chart</li>
+        </ul>
+        <p class="fine">US prices. The yearly plan starts with a one-week free trial for new subscribers. Subscriptions renew until cancelled. The one-time purchase never renews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <p class="tag">Questions</p>
+    <h2>Before you download.</h2>
+    <div class="faq">
+      <details>
+        <summary>How does Sunblush decide if a sky will be good?</summary>
+        <p>It looks at Apple Weather's forecast for cloud at three heights, along with humidity, visibility and the chance of rain, for the minute of sunrise or sunset. High and mid cloud over a clear horizon tends to light up. Thick low cloud or full overcast tends to block the light. The verdict is worked out on your device.</p>
+      </details>
+      <details>
+        <summary>How accurate is it?</summary>
+        <p>It is a likelihood, not a promise. Clouds can move in the last half hour and no forecast catches that every time. Sunblush shows how sure it is, updates as the hour approaches, and afterwards keeps a tally of how often its forecast matched what you told it you saw.</p>
+      </details>
+      <details>
+        <summary>Will it notify me every day?</summary>
+        <p>No. By default you only hear from Sunblush when a sunrise or sunset is forecast Vivid or Spectacular. You can change that in Settings, choose sunrise, sunset or both, and set how early the alert arrives.</p>
+      </details>
+      <details>
+        <summary>Does it work for sunrise too?</summary>
+        <p>Yes. Every sunrise and sunset gets its own verdict.</p>
+      </details>
+      <details>
+        <summary>What does it cost?</summary>
+        <p>Sunblush is free to download and use. Sunblush Pro is $2.99 a month, $14.99 a year with a one-week free trial, or $39.99 once. Prices are for the United States.</p>
+      </details>
+      <details>
+        <summary>What happens to my location and photos?</summary>
+        <p>There is no account. Your photos stay on your device unless you share them. Your location is used on your device to work out sun times, and its coordinates are sent to Apple Weather to fetch the forecast. Sunblush has no server of its own and uses no advertising or analytics software. The <a href="privacy-policy.html">privacy policy</a> has the detail.</p>
+      </details>
+      <details>
+        <summary>Which devices does it run on?</summary>
+        <p>iPhone and iPad with iOS 18 or later, and Apple Watch with watchOS 10 or later. At launch Sunblush is available on the App Store in the United States.</p>
+      </details>
+      <details>
+        <summary>How do I cancel a subscription?</summary>
+        <p>Open Settings on your iPhone, tap your name, then Subscriptions, then Sunblush Pro. If you cancel during the free trial you are not charged.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <h2>See what tonight looks like.</h2>
+    <a class="btn" href="https://apps.apple.com/app/id6762225490">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10M5.5 9 10 13.5 14.500 9M4 17h12"/></svg>
+      Download on the App Store
+    </a>
+    <p class="fine">Free. For iPhone, iPad and Apple Watch.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav aria-label="Footer">
+      <a href="support.html">Support</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Use</a>
+      <a href="mailto:info@jakeawilliams.com">Contact</a>
+    </nav>
+    <p>Forecast data from Apple Weather. <a href="https://weatherkit.apple.com/legal-attribution.html">Weather data sources</a>.</p>
+    <p>&copy; 2026 Jake Williams. Apple, iPhone, iPad, Apple Watch and App Store are trademarks of Apple Inc.</p>
+  </div>
+</footer>
 </body>
 </html>
